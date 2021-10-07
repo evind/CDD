@@ -5,7 +5,8 @@
 package com.itcarlow.runnabletest;
 
 /**
- * Driver program for demonstrating threads in Java using the Runnable interface.
+ * Driver program for demonstrating threads in Java using the
+ * {@link java.lang.Runnable Runnable} interface.
  *
  * @author KEHOEJ
  */
