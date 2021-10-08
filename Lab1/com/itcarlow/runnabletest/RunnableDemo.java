@@ -10,7 +10,14 @@ package com.itcarlow.runnabletest;
  * @author KEHOEJ
  */
 class RunnableDemo implements Runnable {
+   /**
+    * This holds the Thread instance.
+    */
    private Thread t;
+
+   /**
+    * The name used to identify the Thread instance.
+    */
    private String threadName;
    
    /**
