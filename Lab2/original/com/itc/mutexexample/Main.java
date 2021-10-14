@@ -11,14 +11,37 @@ import java.util.concurrent.Executors;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
+
 /**
  *
  * @author joe
+ * @author Evin Darling (C00144257)
+ * @date 11/10/2021
+ * @license GPLv3
+ * @briefDescription Driver program that demonstrates a race condition using
+ *                   threads.
+ *
+ * @fullDescription This program creates a number of threads and adds them
+ *                  to a thread pool for execution. Each task is passed a
+ *                  reference to an IntegerObj instance, then attempts to
+ *                  increment it's `total` value by 1, 500 times.
+ *
+ *                  Since there are 4 tasks incrementing the value 500 times,
+ *                  the end value is expected to be 2000. This is not always
+ *                  the case because a race condition exists. Some attempts
+ *                  to increment the value will effectively be lost as
+ *                  one thread may read the value of `total` before another
+ *                  finishes incrementing the value by one.
+ */
+
+/**
+ * Main class holding the main driver function.
  */
 public class Main {
     
       // Maximum number of threads in thread pool
-    static final int MAX_T = 4;             
+    static final int MAX_T = 8;             
   
     public static void main(String[] args)
     {

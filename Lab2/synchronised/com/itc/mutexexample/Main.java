@@ -14,6 +14,26 @@ import java.util.logging.Logger;
 /**
  *
  * @author joe
+ * @author Evin Darling (C00144257)
+ * @date 11/10/2021
+ * @license GPLv3
+ * @briefDescription Driver program that demonstrates a solution to the race
+ *                   condition using the Java `synchronized` keyword.
+ *
+ * @fullDescription This program creates a number of threads and adds them
+ *                  to a thread pool for execution. Each task is passed a
+ *                  reference to an IntegerObj instance, then attempts to
+ *                  increment it's `total` value by 1, 500 times.
+ *
+ *                  Since there are 4 tasks incrementing the value 500 times,
+ *                  the end value is expected to be 2000. This will always be
+ *                  the case since the {@code IntegerObj.inc()} instance method
+ *                  makes use of the `synchronized` keyword, meaning that only
+ *                  one thread can execute it at a time.
+ */
+
+/**
+ * Main class holding the main driver function.
  */
 public class Main {
     

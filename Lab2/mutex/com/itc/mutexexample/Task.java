@@ -11,6 +11,15 @@ import java.util.Date;
 /**
  *
  * @author joe
+ * @author Evin Darling (C00144257)
+ * @date 11/10/2021
+ * @license GPLv3
+ * @briefDescription Implentation of the {@link java.lang.Runnable Runnable}
+ *                   interface.
+ *
+ * @fullDescription This class is composed of an {@code IntegerObj} and a
+ *                  {@code run()} method and is inteded to be executed in
+ *                  a thread pool.
  */
 public class Task implements Runnable {
 private String name;
@@ -20,6 +29,10 @@ private String name;
         this.total = total;
     }
     
+    /**
+     * Attempt to increment the value of `total` by 1, 500 times, sleeping
+     * briefly every 100 incrementations.
+     */
     public void run()
     {
         try

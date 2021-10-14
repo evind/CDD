@@ -10,6 +10,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  *
  * @author joe
+ * @author Evin Darling (C00144257)
+ * @date 11/10/2021
+ * @license GPLv3
+ * @briefDescription This class implements an object representation of an
+ *                   integer using an {@code AtomicInteger}.
  */
 class IntegerObj {
     private final AtomicInteger value;
@@ -22,12 +27,16 @@ class IntegerObj {
       return this.value.get();
     }
 
+    /**
+     * This method will loop until it successfully increments the value of
+     * the {@code AtomicInteger} by 1.
+     */
     int inc(){
         while(true) {
             int currentVal = this.getValue();
             int newVal = currentVal + 1;
             if (value.compareAndSet(currentVal, newVal)) {
-                return 0;  // return val does not matter
+                return 0;
             }
         }
     }

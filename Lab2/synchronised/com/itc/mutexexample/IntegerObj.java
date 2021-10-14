@@ -8,16 +8,25 @@ package com.itc.mutexexample;
 /**
  *
  * @author joe
- * @license GPLv3
+ * @author Evin Darling (C00144257)
  * @date 11/10/2021
- * @shortDescription 
- * @longDescription
+ * @license GPLv3
+ * @briefDescription This class implements an object representation of an
+ *                   integer.
+ * @fullDescription This class' `inc()` functions is implemented with the
+ *                  `synchronized` keyword. This makes it so this instance
+ *                  method can only be executed by one thread at a time.
  */
 class IntegerObj {
     int value;
     IntegerObj(int val) {
         this.value = val;
     }
+
+    /**
+     * Increments `value` by 1. Synchronized so that only one thread can execute
+     * it at a time.
+     */
     synchronized int inc(){
         this.value++;
         return this.value;
