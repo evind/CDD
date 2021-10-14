@@ -23,6 +23,9 @@ class IntegerObj {
         this.value = new AtomicInteger(val);
     }
 
+    /**
+     * Returns the value of the {@code AtomicInteger}
+     */
     public int getValue() {
       return this.value.get();
     }
