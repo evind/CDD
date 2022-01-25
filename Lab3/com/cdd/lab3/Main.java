@@ -1,3 +1,5 @@
+package com.cdd.lab3;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.logging.Level;
@@ -28,9 +30,13 @@ public class Main {
     /** Maximum number of threads in thread pool */
     static final int MAX_T = 8;
 
+    /**
+     * Creates a ReusableBarrier, 4 Task1 instances and a thread pool that
+     * will be used to execute them. The thread pool will then be shut down.
+     */
     public static void main(String[] args) {
         ReusableBarrier barrier1 = new ReusableBarrier(4);
-        // creates five tasks
+        // creates four tasks
         Runnable r1 = new Task1("Task 1", barrier1);
         Runnable r2 = new Task1("Task 2", barrier1);
         Runnable r3 = new Task1("Task 3", barrier1);
@@ -40,7 +46,7 @@ public class Main {
         // threads as the fixed pool size(Step 2)
         ExecutorService pool = Executors.newFixedThreadPool(MAX_T);
 
-        // passes the Task objects to the pool to execute (Step 3)
+        // passes the Task1 objects to the pool to execute (Step 3)
         pool.execute(r1);
         pool.execute(r2);
         pool.execute(r3);
