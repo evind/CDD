@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.cdd.lab5","l":"Follower"},{"p":"com.cdd.lab5","l":"Leader"},{"p":"com.cdd.lab5","l":"LeaderFollowerQueue"},{"p":"com.cdd.lab5","l":"Main"}];updateSearchResults();
