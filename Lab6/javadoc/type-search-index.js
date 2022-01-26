@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.cdd.lab6","l":"Buffer"},{"p":"com.cdd.lab6","l":"Consumer"},{"p":"com.cdd.lab6","l":"Main"},{"p":"com.cdd.lab6","l":"Producer"}];updateSearchResults();
